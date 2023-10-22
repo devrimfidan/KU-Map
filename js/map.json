@@ -1,0 +1,14 @@
+{
+  "cafes": [{
+      "name": "Taş Cafe",
+      "lat": 41.05136,
+      "long": 28.98210,
+      "neighborhood": "Kurtuluş",
+      "ambiance": "4/5",
+      "flavor": "5/5",
+      "comments": "Best cappuccino and croissant I've ever had. Place is rather small, so working there when it's empty is awkward."
+    }
+   
+  
+  ]
+}
