@@ -1,0 +1,253 @@
+/**
+ * IMPORTS       (i-)
+ * LEAFLET       (s-)
+ * VARIABLES     (v-)
+ * MIXINS        (m-)
+ * BASE STYLES   (b-)
+ * LAYOUT        (l-)
+ * COMPONENTS    (c-)
+ * UTILITIES     (u-)
+ * JAVASCRIPT    (j-)
+ * ANIMATION     (a-)
+**/
+/* LEAFLET (s-)
+   ============================================= */
+#map {
+  height: 800px;
+  width: 100%;
+}
+
+/* VARIABLES (v-)
+   ============================================= */
+/* BASE STYLES (b-)
+   ============================================= */
+html {
+  box-sizing: border-box;
+  /* irish border-box */
+  font-size: 16px;
+  line-height: 1.5rem;
+  overflow-y: scroll;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f2f3f5;
+  color: #3e3e3e;
+  font-family: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelveticaNeue", "HelveticaNeueLT", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 300;
+  padding: 16px 24px;
+}
+
+h2 {
+  border-bottom: solid 1px #dbdee3;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* LAYOUT (l-)
+   ============================================= */
+.l-wrap {
+  height: auto;
+  overflow: hidden;
+}
+
+.l-aside {
+  background: #f2f3f5;
+  float: left;
+  height: 100vh;
+  width: 325px;
+}
+
+.l-main {
+  width: auto;
+  overflow: hidden;
+}
+
+/* COMPONENTS (c-)
+   ============================================= */
+.c-nav__container {
+  position: relative;
+}
+
+.c-nav__container > li {
+  background-color: #ffffff;
+  border-top: solid 1px #dbdee3;
+}
+
+.c-nav__container h2 {
+  color: #3e3e3e;
+  font-weight: 400;
+  padding: 16px 40px;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 2;
+}
+.c-nav__container h2:hover {
+  color: #006fba;
+}
+
+.c-nav__container h2:before {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #006fba;
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: 22px;
+}
+
+.c-nav__container h2:after {
+  background-color: #f2f3f5;
+  border: solid 2px #006fba;
+  border-radius: 50%;
+  content: "";
+  height: 8px;
+  position: absolute;
+  top: 43%;
+  left: 22px;
+  width: 8px;
+  transform: translateY(-50%);
+}
+
+.c-nav__item:after {
+  color: #d5d8df;
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 2px;
+  position: absolute;
+  top: 13px;
+  left: 296px;
+  transform: rotate(0deg);
+  transition: all 0.25s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+}
+
+.c-nav__item.j-is-active:after {
+  color: #9ca3b2;
+  transform: rotate(-45deg);
+  transition: all 0.25s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+}
+
+.c-nav__item {
+  cursor: pointer;
+  margin-top: -1px;
+  position: relative;
+}
+
+.c-nav__sub {
+  background-color: #f2f3f5;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease-in-out;
+  transition-property: max-height, opacity;
+}
+
+.c-nav__sub a {
+  color: #3e3e3e;
+  display: block;
+  padding: 8px 40px;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+}
+.c-nav__sub a:hover {
+  background-color: #e9ebee;
+}
+
+.c-nav__sub a:before {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #3e3e3e;
+  content: "";
+  position: absolute;
+  top: 42%;
+  left: 22px;
+}
+
+.c-nav__sub a:after {
+  background-color: #f2f3f5;
+  border: solid 2px #3e3e3e;
+  border-radius: 50%;
+  content: "";
+  height: 8px;
+  position: absolute;
+  top: 42%;
+  left: 22px;
+  width: 8px;
+  transform: translateY(-50%);
+}
+
+.c-icon {
+  background-color: transparent;
+  border: solid 9px #006fba;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+.c-icon:after {
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 12px solid #006fba;
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -5px;
+}
+
+.c-icon__red {
+  border-color: #ef4658;
+}
+
+.c-icon__red:after {
+  border-top-color: #ef4658;
+}
+
+/* JAVASCRIPT (j-)
+   ============================================= */
+.c-nav__sub.j-is-open {
+  max-height: 200px;
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+  transition-property: max-height, opacity;
+  visibility: visible;
+}
+
+.j-is-highlight {
+  background-color: #e9ebee;
+}
+
+/* ANIMATION (a-)
+   ============================================= */
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

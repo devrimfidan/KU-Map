@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Leaflet Map (Under Development)</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,300'>
+<link rel='stylesheet' href='https://unpkg.com/leaflet@1.0.2/dist/leaflet.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+CURRENTLY: 
+1. Only first three links set up to work
+2. Mapbox API key needs to be renewed
+NEED TO:
+1. Color coordinate groups
+2. Responsive
+3. Create json file to feed map
+4. Better define buildings
+5. ADA
+-->
+
+<div class="l-wrap">
+  <aside class="l-aside">
+   <nav class="c-nav">
+      <h1>Campus Map</h1>
+      <ul class="c-nav__container">
+         <li class="c-nav__item">
+           <h2>Arts & Science Center</h2>
+            <ul class="c-nav__sub">
+              <li><a href="#" id="marker_1">Art Display</a></li>
+              <li><a href="#" id="marker_2">Human Resources</a></li>
+              <li><a href="#" id="marker_3">Language Center</a></li>
+              <li><a href="#">Math Center</a></li>
+              <li><a href="#">Theater</a></li>
+            </ul>
+         </li>
+         <li class="c-nav__item">
+           <h2>Jason Technology Center</h2>
+            <ul class="c-nav__sub">
+              <li><a href="#">Bookstore</a></li>
+              <li><a href="#">Computer Lab</a></li>
+              <li><a href="#">Gymnasium</a></li>
+              <li><a href="#">Testing Center</a></li>
+            </ul class="c-subnav">
+         </li>
+         <li class="c-nav__item">
+           <h2>Student Services Center</h2>
+            <ul class="c-nav__sub">
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">Coffee Shop</a></li>
+              <li><a href="#">Career Services</a></li>
+              <li><a href="#">Counselors</a></li>
+              <li><a href="#">Dining Hall</a></li>
+              <li><a href="#">Financial Aid</a></li>
+            </ul>
+         </li>
+         <li class="c-nav__item">
+           <h2>Partnership Center</h2>
+            <ul class="c-nav__sub">
+              <li><a href="#">Lecture Hall</a></li>
+              <li><a href="#">Snack Lounge</a></li>
+              <li><a href="#">Workforce Development</a></li>
+            </ul>
+         </li>
+         <li class="c-nav__item">
+           <h2>Stephen J. Betze Library</h2>
+            <ul class="c-nav__sub">
+              <li><a href="#">Tutoring Center</a></li>
+              <li><a href="#">Writing Center</a></li>
+            </ul>
+         </li>
+      </ul>
+   </nav>
+</aside>
+<main class="l-main">
+  <div id="map"></div>
+</main>
+</div><!-- end .l-wrap -->
+
+
+
+
+<!-- <div class="l-wrap">
+  <div class="l-wrap__inner u-pt2 u-pb">
+    <div class="l-12">
+      <h1 class="u-tc u-twl">Leaflet Map</h1>
+    </div>
+  </div>
+</div> -->
+<!-- partial -->
+  <script src='https://unpkg.com/leaflet@1.0.2/dist/leaflet.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

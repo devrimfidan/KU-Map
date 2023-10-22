@@ -12,7 +12,7 @@ const coffeeCup = L.icon({
 const myBasemap = L.tileLayer(
   'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   {
-  maxZoom: 16,
+  maxZoom: 17,
     attribution:
       '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   });
@@ -21,7 +21,7 @@ const myBasemap = L.tileLayer(
 myBasemap.addTo(myMap);
 
 // Set center of the map
-myMap.setView([41.0425, 28.9850], 12);
+myMap.setView([41.2041, 29.0743], 16);
 
 // Make an XMLHttpRequest to the JSON data
 const request = new XMLHttpRequest();
